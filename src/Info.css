@@ -1,0 +1,226 @@
+.InfoContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.stream {
+  box-shadow: none;
+  border: none;
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  align-content: center;
+  max-width: 1000px;
+}
+
+.stream > iframe {
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.114) 0 0px 20px 2px;
+  /* margin: auto; */
+  /* box-shadow: rgba(255, 255, 255, 0.571) 0 0 1px 5px; */
+  /* margin: auto; */
+}
+
+.infoData {
+  /* flex-grow: 2; */
+  flex-basis: 500px;
+  flex-shrink: 0;
+  min-height: 430px;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.poster {
+  top: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 70vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.poster::after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 30%,
+    transparent 100%
+  );
+}
+
+.stars {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  /* z-index: -1; */
+}
+.stars > i {
+  font-size: 2rem;
+  mix-blend-mode: darken;
+  background: rgb(19, 19, 19);
+}
+.bar {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: gold;
+}
+
+.imdbRating {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.imdbData {
+  margin-left: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  background: rgb(166, 135, 55);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.imdbData > p {
+  font-size: small;
+  margin-left: 4px;
+  /* opacity: 0.8; */
+}
+h1 {
+  margin: 20px;
+  display: flex;
+  align-items: start;
+}
+
+.rated {
+  margin-left: 7px;
+  font-size: 12px;
+  background: rgb(75, 123, 120);
+  padding: 2px 4px;
+  border-radius: 4px;
+  align-content: center;
+}
+
+.year {
+  margin-left: 7px;
+  opacity: 0.6;
+}
+.genre {
+  display: flex;
+  gap: 14px;
+}
+.genreItem {
+  opacity: 0.6;
+}
+.actors {
+  display: flex;
+  margin: 20px;
+}
+.actors > p {
+  opacity: 0.6;
+  margin-right: 10px;
+}
+.plot {
+  position: relative;
+  padding: 10px;
+  font-size: larger;
+  word-spacing: 3px;
+  display: grid;
+
+  grid-template-rows: 0.6fr;
+  transition: 500ms;
+}
+
+.plot::after {
+  content: "View More...";
+  color: bisque;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.7;
+  transition: 500ms;
+}
+
+.plot::after {
+  cursor: pointer;
+}
+
+.plot::before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.136),
+    #5958582b,
+    transparent
+  );
+  opacity: 1;
+  transition: 500ms;
+}
+.plotData {
+  overflow: hidden;
+}
+
+.plot:focus {
+  grid-template-rows: 1fr;
+  background: linear-gradient(0deg, rgba(184, 184, 184, 0.071), transparent);
+}
+.plot:focus::before,
+.plot:focus::after {
+  opacity: 0;
+}
+
+.dropdowns {
+  display: flex;
+  margin: 0 10px;
+  /* gap: 10px; */
+}
+select {
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.494);
+  font-weight: bold;
+  padding: 3px 4px;
+  outline: none;
+  background: #345f5c;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+option {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  .infoData {
+    position: relative;
+  }
+  .stream > iframe {
+    box-shadow: none;
+  }
+  .stream {
+    border-bottom: 1px solid grey;
+
+    box-shadow: inset 0 -18px 26px -26px #777777;
+  }
+}
