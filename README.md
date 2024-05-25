@@ -9,7 +9,6 @@ Welcome to StreamPix, your go-to movie streaming website built with React and Vi
 - [Usage](#usage)
 - [Technologies](#technologies)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -105,13 +104,10 @@ Contributions are what make the open source community such an amazing place to l
 
 5. **Open a Pull Request**
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@giilluu](https://x.com/giilluu) 
+X - [@giilluu](https://x.com/giilluu) 
 
 Mail@kastooovv@gmail.com
 
