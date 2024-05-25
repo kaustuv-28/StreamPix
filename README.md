@@ -112,7 +112,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Your Name - [@giilluu](https://x.com/giilluu) 
-- your -kastooovv@gmail.com
+Mail@kastooovv@gmail.com
 
 Project Link: [https://github.com/kaustuv-28/StreamPix](https://github.com/kaustuv-28/StreamPix)
 
